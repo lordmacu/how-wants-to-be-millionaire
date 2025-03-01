@@ -131,6 +131,7 @@ export default {
         // After 3 seconds, validate the answer and update the UI color accordingly
         setTimeout(() => {
           this.validated = true;
+          this.stopFinalAnswer();
           if (letter !== this.selectedQuestion.correctAnswer) {
             this.playWrongSound();
           } else {
