@@ -1,0 +1,69 @@
+@use 'variables' as *;
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: $logo-bg;
+  border: 2px solid $gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 0 30px $shadow-gold;
+  animation: pulse 2s infinite;
+}
+
+.logo-inner {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  border: 3px solid $gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 10, 70, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-text {
+  color: $white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 1px;
+    background: $gold;
+    transform-origin: center;
+  }
+  
+  &::before { transform: translate(-50%, -50%) rotate(0deg); }
+  &::after { transform: translate(-50%, -50%) rotate(45deg); }
+}
+
+.pattern-2 {
+  &::before { transform: translate(-50%, -50%) rotate(90deg); }
+  &::after { transform: translate(-50%, -50%) rotate(135deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 15px $shadow-gold; }
+  50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); }
+}
