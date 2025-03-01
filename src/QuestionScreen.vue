@@ -6,13 +6,16 @@
     <Logo />
 
     <!-- Question container -->
-    <div class="question-container">
+    <div class="question-container" v-if="!noMoreQuestions"> 
       <div v-if="selectedQuestion">
         <div class="question-text">{{ selectedQuestion.text }}</div>
       </div>
       <div v-else>
         <p class="no-question">Selecciona un premio para ver la pregunta.</p>
       </div>
+    </div>
+    <div class="finish-text" v-else>
+      Ahora eres Biblionario
     </div>
 
     <!-- 50/50 Button -->
@@ -28,9 +31,12 @@
     </button>
 
     <!-- Options container -->
-    <div v-if="selectedQuestion" class="options-container">
+
+    
+      <div v-if="selectedQuestion " class="options-container">
       <div 
         class="option" 
+        v-if="!noMoreQuestions"
         v-for="(option, index) in filteredOptions" 
         :key="index" 
         :class="getOptionClass(option.letter)" 
@@ -39,6 +45,8 @@
         <div class="option-text">{{ option.text }}</div>
       </div>
     </div>
+     
+  
   </div>
 </template>
 
@@ -66,6 +74,7 @@ export default {
   },
   data() {
     return {
+      noMoreQuestions: false,
       selectedAnswer: null,
       validated: false, // Flag that indicates if the answer has been validated
       countdown: 30,
@@ -300,6 +309,7 @@ export default {
           this.$emit("question-selected", this.questions[nextIndex]);
         }, 5000);
       } else {
+        this.noMoreQuestions = true;
         console.log("No hay más preguntas disponibles.");
       }
     }
@@ -323,3 +333,10 @@ export default {
   }
 };
 </script>
+
+<style>
+.finish-text{
+  color:white;
+  font-size: 40px;
+}
+</style>
