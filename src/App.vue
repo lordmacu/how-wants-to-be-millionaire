@@ -65,50 +65,139 @@ export default {
 
     // Listas de premios y preguntas
     const prizes = ref([
-      { id: 1, amount: "$ 100.000" },
-      { id: 2, amount: "$ 200.000" },
-      { id: 3, amount: "$ 300.000" },
-      { id: 4, amount: "$ 400.000" },
-      { id: 5, amount: "$ 500.000" }
+    { id: 1, amount: "$100" },
+    { id: 2, amount: "$200" },
+    { id: 3, amount: "$300" },
+    { id: 4, amount: "$500" },
+    { id: 5, amount: "$1000" },
+    { id: 6, amount: "$1000" },
+    { id: 7, amount: "$2000" },
+    { id: 8, amount: "$4000" },
+    { id: 9, amount: "$8000" },
+    { id: 10, amount: "$16000" }
     ]);
 
     const questions = ref([
-      {
-        id: 1,
-        prizeId: 1,
-        text: "¿Cuál es la capital de Francia?",
-        options: [
-          { letter: "A", text: "Madrid" },
-          { letter: "B", text: "Berlín" },
-          { letter: "C", text: "París" },
-          { letter: "D", text: "Lisboa" }
-        ],
-        correctAnswer: "C"
-      },
-      {
-        id: 2,
-        prizeId: 2,
-        text: "¿Cuánto es 5 + 7?",
-        options: [
-          { letter: "A", text: "10" },
-          { letter: "B", text: "12" },
-          { letter: "C", text: "15" },
-          { letter: "D", text: "20" }
-        ],
-        correctAnswer: "B"
-      },
-      {
-        id: 3,
-        prizeId: 3,
-        text: "¿Quién pintó la Mona Lisa?",
-        options: [
-          { letter: "A", text: "Vincent van Gogh" },
-          { letter: "B", text: "Leonardo da Vinci" },
-          { letter: "C", text: "Pablo Picasso" },
-          { letter: "D", text: "Claude Monet" }
-        ],
-        correctAnswer: "B"
-      }
+    {
+      id: 1,
+      prizeId: 1,
+      text: "Según Hebreos 11:1, la fe es:",
+      options: [
+        { letter: "A", text: "La seguridad de que todo saldrá bien" },
+        { letter: "B", text: "Creer en lo que podemos ver y tocar" },
+        { letter: "C", text: "La certeza de lo que se espera, la convicción de lo que no se ve" },
+        { letter: "D", text: "La confianza en que Dios nos dará lo que pedimos" }
+      ],
+      correctAnswer: "C"
+    },
+    {
+      id: 2,
+      prizeId: 2,
+      text: "¿Por qué Abraham es llamado el padre de la fe?",
+      options: [
+        { letter: "A", text: "Porque tuvo muchos hijos que creyeron en Dios" },
+        { letter: "B", text: "Porque creyó en la promesa de Dios incluso cuando parecía imposible" },
+        { letter: "C", text: "Porque enseñó a su pueblo sobre la fe" },
+        { letter: "D", text: "Porque nunca dudó en ningún momento" }
+      ],
+      correctAnswer: "B"
+    },
+    {
+      id: 3,
+      prizeId: 3,
+      text: "Cuando Pedro caminó sobre el agua hacia Jesús, ¿qué pasó?",
+      options: [
+        { letter: "A", text: "Caminó sin problemas hasta llegar a Jesús" },
+        { letter: "B", text: "Comenzó a hundirse cuando tuvo miedo del viento y las olas" },
+        { letter: "C", text: "No logró dar ni un solo paso" },
+        { letter: "D", text: "Se negó a intentarlo porque era demasiado arriesgado" }
+      ],
+      correctAnswer: "B"
+    },
+    {
+      id: 4,
+      prizeId: 4,
+      text: "Cuando Jesús habló con Marta sobre la muerte de su hermano Lázaro, ¿qué le dijo sobre la fe?",
+      options: [
+        { letter: "A", text: "Si me crees, entenderás por qué murió" },
+        { letter: "B", text: "Lázaro volverá si oras con suficiente fe" },
+        { letter: "C", text: "El que cree en mí, aunque esté muerto, vivirá" },
+        { letter: "D", text: "Dios ha decidido que este sea su destino" }
+      ],
+      correctAnswer: "C"
+    },
+    {
+      id: 5,
+      prizeId: 5,
+      text: "Cuando Dios pidió a Abraham que sacrificara a su hijo Isaac, ¿cómo reaccionó?",
+      options: [
+        { letter: "A", text: "Dijo que buscaría otra alternativa para obedecer" },
+        { letter: "B", text: "Se preparó para hacerlo, confiando en que Dios proveiería" },
+        { letter: "C", text: "Se negó y pidió otra prueba en su lugar" },
+        { letter: "D", text: "Buscó consejo antes de tomar una decisión" }
+      ],
+      correctAnswer: "B"
+    },
+    {
+      id: 6,
+      prizeId: 6,
+      text: "¿Por qué Abraham fue considerado justo delante de Dios?",
+      options: [
+        { letter: "A", text: "Porque cumplió la Ley de Dios a la perfección" },
+        { letter: "B", text: "Porque confió en la promesa de Dios antes de verla cumplida" },
+        { letter: "C", text: "Porque ofreció sacrificios constantemente" },
+        { letter: "D", text: "Porque siempre supo lo que Dios iba a hacer" }
+      ],
+      correctAnswer: "B"
+    },
+    {
+      id: 7,
+      prizeId: 7,
+      text: "Cuando los discípulos entraron en pánico por la tormenta en el mar, Jesús les dijo:",
+      options: [
+        { letter: "A", text: "Oren con más fuerza y el viento se calmará" },
+        { letter: "B", text: "¿Por qué tienen miedo, hombres de poca fe?" },
+        { letter: "C", text: "No se preocupen, esto es solo una prueba" },
+        { letter: "D", text: "Esperen a que pase, todo estará bien" }
+      ],
+      correctAnswer: "B"
+    },
+    {
+      id: 8,
+      prizeId: 8,
+      text: "¿Qué le ocurrió a la viuda de Sarepta cuando obedeció la palabra de Elías?",
+      options: [
+        { letter: "A", text: "Su provisión de harina y aceite nunca se agotó" },
+        { letter: "B", text: "Su hijo se convirtió en un líder importante" },
+        { letter: "C", text: "Sus riquezas aumentaron" },
+        { letter: "D", text: "Fue llevada a un lugar seguro" }
+      ],
+      correctAnswer: "A"
+    },
+    {
+      id: 9,
+      prizeId: 9,
+      text: "El centurión romano demostró su fe en Jesús cuando dijo:",
+      options: [
+        { letter: "A", text: "Si vienes a mi casa, sé que mi siervo sanará" },
+        { letter: "B", text: "Solo necesito ver un milagro para creer" },
+        { letter: "C", text: "No soy digno de que entres en mi casa, pero di la palabra y mi siervo sanará" },
+        { letter: "D", text: "Si es tu voluntad, ven a mi hogar y sánalo" }
+      ],
+      correctAnswer: "C"
+    },
+    {
+      id: 10,
+      prizeId: 10,
+      text: "Según Santiago 2:17, ¿cómo debe ser la fe de un creyente?",
+      options: [
+        { letter: "A", text: "Debe demostrarse con acciones, pues la fe sin obras muerta" },
+        { letter: "B", text: "Es suficiente con creer en el corazón" },
+        { letter: "C", text: "Debe ser muy fuerte" },
+        { letter: "D", text: "La fe mueve montañas" }
+      ],
+      correctAnswer: "A"
+    }
     ]);
 
     const selectedQuestion = ref(null);
@@ -200,7 +289,6 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para botones flotantes */
 .floating-button {
   position: fixed;
   border: none;

@@ -2,7 +2,6 @@
   <div class="container">
     <Logo @click="initializeAudio" />
 
-    <!-- Lista de premios filtrados -->
     <div class="premios-container">
       <div
         class="premio"

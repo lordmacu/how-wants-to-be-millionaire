@@ -221,6 +221,13 @@ export default {
       this.callFriend = false;
     },
 
+    stopPhone(){
+      if (this.phoneSound) {
+        this.phoneSound.pause();
+        this.phoneSound.currentTime = 0;
+      }
+    },
+
     /**
      * Starts the countdown timer and resets state for a new question.
      */
@@ -288,6 +295,7 @@ export default {
           this.usedFiftyFifty = false;
           this.callFriend = true;
           this.stopFinalAnswer();
+          this.stopPhone();
           // Emit the new question and reset state via startCountdown in el watcher
           this.$emit("question-selected", this.questions[nextIndex]);
         }, 5000);

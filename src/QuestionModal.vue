@@ -91,18 +91,6 @@
   import { ref, computed, watch } from 'vue';
   import { Modal } from 'usemodal-vue3';
   
-  /**
-   * QuestionModal component
-   * @component
-   * @prop {Boolean} visible - Controla la visibilidad del modal.
-   * @prop {Array} questions - Lista de preguntas.
-   * @prop {Array} prizes - Lista de premios.
-   * @emits save - Emite la pregunta al guardar.
-   * @emits cancel - Emite al cancelar la edición.
-   * @emits edit - Emite cuando se selecciona editar una pregunta.
-   * @emits create - Emite cuando se inicia la creación de una pregunta.
-   * @emits update:visible - Emite la actualización de la visibilidad.
-   */
   export default {
     name: 'QuestionModal',
     components: { Modal },
@@ -122,7 +110,6 @@
     },
     emits: ['save', 'cancel', 'edit', 'create', 'update:visible'],
     setup(props, { emit }) {
-      // Propiedad computada para gestionar la visibilidad de forma bidireccional.
       const localVisible = computed({
         get: () => props.visible,
         set: (value) => {
