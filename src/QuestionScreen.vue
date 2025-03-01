@@ -148,7 +148,7 @@ export default {
      * Plays the final answer sound.
      */
     playFinalAnswer() {
-      this.finalAnswer = new Audio('/sounds/finalanswer.mp3');
+      this.finalAnswer = new Audio('sounds/finalanswer.mp3');
       this.finalAnswer.play();
     },
 
@@ -186,7 +186,7 @@ export default {
      * Plays the wrong answer sound.
      */
     playWrongSound() {
-      this.wrongSound = new Audio('/sounds/wrong.mp3');
+      this.wrongSound = new Audio('sounds/wrong.mp3');
       this.wrongSound.play();
     },
 
@@ -194,7 +194,7 @@ export default {
      * Plays the correct answer sound.
      */
     playFineSound() {
-      this.fineSound = new Audio('/sounds/fine.mp3');
+      this.fineSound = new Audio('sounds/fine.mp3');
       this.fineSound.play();
     },
 
@@ -202,7 +202,7 @@ export default {
      * Plays the initial sound when the question loads.
      */
     playInitialSound() {
-      this.initialSound = new Audio('/sounds/initial.mp3');
+      this.initialSound = new Audio('sounds/initial.mp3');
       this.initialSound.loop = true;
       this.initialSound.play();
     },
@@ -214,7 +214,7 @@ export default {
       if (this.initialSound) {
         this.initialSound.pause();
       }
-      this.phoneSound = new Audio('/sounds/phone.mp3');
+      this.phoneSound = new Audio('sounds/phone.mp3');
       this.phoneSound.loop = true;
       this.phoneSound.play();
       this.callFriend = false;

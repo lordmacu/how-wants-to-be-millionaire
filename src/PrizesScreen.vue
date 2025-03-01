@@ -68,7 +68,7 @@ export default {
      * Reproduce la música de fondo.
      */
     playMainTheme() {
-      this.mainTheme = new Audio('/sounds/main.mp3');
+      this.mainTheme = new Audio('sounds/main.mp3');
       this.mainTheme.loop = true; // Para que la música siga sonando
       this.mainTheme.volume = 0.5; // Reduce el volumen al 50%
 
