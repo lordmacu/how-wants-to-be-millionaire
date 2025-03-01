@@ -66,15 +66,15 @@ export default {
     // Listas de premios y preguntas
     const prizes = ref([
     { id: 1, amount: "Trident" },
-    { id: 2, amount: "Sparkies" },
+    { id: 2, amount: "Oreo" },
     { id: 3, amount: "Tic Tac" },
     { id: 4, amount: "Chocorramo" },
     { id: 5, amount: "Paquete de Gomitas" },
-    { id: 6, amount: "Chocolatina jet" },
-    { id: 7, amount: "Paquete de barquillos" },
+    { id: 6, amount: "Galletas italo" },
+    { id: 7, amount: "Brownie" },
     { id: 8, amount: "Bonyurt" },
     { id: 9, amount: "Alpinet" },
-    { id: 10, amount: "Chocolatina Jumbo" }
+    { id: 10, amount: "Snickers" }
     ]);
 
     const questions = ref([
